@@ -86,180 +86,117 @@ public class SystemServices {
         return new SystemServices(context);
     }
 
-    @TargetApi(1) public ActivityManager getActivityManager() { return getActivityManager(context); }
-    @TargetApi(1) public AlarmManager getAlarmManager() { return getAlarmManager(context); }
-    @TargetApi(1) public AudioManager getAudioManager() { return getAudioManager(context); }
-    @TargetApi(1) public ClipboardManager getClipboardManager() { return getClipboardManager(context); }
-    @TargetApi(1) public ConnectivityManager getConnectivityManager() { return getConnectivityManager(context); }
-    @TargetApi(1) public KeyguardManager getKeyguardManager() { return getKeyguardManager(context); }
-    @TargetApi(1) public LayoutInflater getLayoutInflater() { return getLayoutInflater(context); }
-    @TargetApi(1) public LocationManager getLocationManager() { return getLocationManager(context); }
-    @TargetApi(1) public NotificationManager getNotificationManager() { return getNotificationManager(context); }
-    @TargetApi(1) public PowerManager getPowerManager() { return getPowerManager(context); }
-    @TargetApi(1) public SearchManager getSearchManager() { return getSearchManager(context); }
-    @TargetApi(1) public SensorManager getSensorManager() { return getSensorManager(context); }
-    @TargetApi(1) public TelephonyManager getTelephonyManager() { return getTelephonyManager(context); }
-    @TargetApi(1) public Vibrator getVibrator() { return getVibrator(context); }
-    @TargetApi(1) public WallpaperService getWallpaperService() { return getWallpaperService(context); }
-    @TargetApi(1) public WifiManager getWifiManager() { return getWifiManager(context); }
-    @TargetApi(1) public WindowManager getWindowManager() { return getWindowManager(context); }
-    @TargetApi(3) public InputMethodManager getInputMethodManager() { return getInputMethodManager(context); }
-    @TargetApi(4) public AccessibilityManager getAccessibilityManager() { return getAccessibilityManager(context); }
-    @TargetApi(5) public AccountManager getAccountManager() { return getAccountManager(context); }
-    @TargetApi(8) public DevicePolicyManager getDevicePolicyManager() { return getDevicePolicyManager(context); }
-    @TargetApi(8) public DropBoxManager getDropBoxManager() { return getDropBoxManager(context); }
-    @TargetApi(8) public UiModeManager getUiModeManager() { return getUiModeManager(context); }
-    @TargetApi(9) public DownloadManager getDownloadManager() { return getDownloadManager(context); }
-    @TargetApi(9) public StorageManager getStorageManager() { return getStorageManager(context); }
-    @TargetApi(10) public NfcManager getNfcManager() { return getNfcManager(context); }
-    @TargetApi(12) public UsbManager getUsbManager() { return getUsbManager(context); }
-    @TargetApi(14) public TextServicesManager getTextServicesManager() { return getTextServicesManager(context); }
-    @TargetApi(14) public WifiP2pManager getWifiP2pManager() { return getWifiP2pManager(context); }
-    @TargetApi(16) public InputManager getInputManager() { return getInputManager(context); }
-    @TargetApi(16) public MediaRouter getMediaRouter() { return getMediaRouter(context); }
-    @TargetApi(16) public NsdManager getNsdManager() { return getNsdManager(context); }
-    @TargetApi(17) public DisplayManager getDisplayManager() { return getDisplayManager(context); }
-    @TargetApi(17) public UserManager getUserManager() { return getUserManager(context); }
-    @TargetApi(18) public BluetoothManager getBluetoothManager() { return getBluetoothManager(context); }
-    @TargetApi(19) public AppOpsManager getAppOpsManager() { return getAppOpsManager(context); }
-    @TargetApi(19) public CaptioningManager getCaptioningManager() { return getCaptioningManager(context); }
-    @TargetApi(19) public ConsumerIrManager getConsumerIrManager() { return getConsumerIrManager(context); }
-    @TargetApi(19) public PrintManager getPrintManager() { return getPrintManager(context); }
-    @TargetApi(21) public AppWidgetManager getAppWidgetManager() { return getAppWidgetManager(context); }
-    @TargetApi(21) public BatteryManager getBatteryManager() { return getBatteryManager(context); }
-    @TargetApi(21) public CameraManager getCameraManager() { return getCameraManager(context); }
-    @TargetApi(21) public JobScheduler getJobScheduler() { return getJobScheduler(context); }
-    @TargetApi(21) public LauncherApps getLauncherApps() { return getLauncherApps(context); }
-    @TargetApi(21) public MediaProjectionManager getMediaProjectionManager() { return getMediaProjectionManager(context); }
-    @TargetApi(21) public MediaSessionManager getMediaSessionManager() { return getMediaSessionManager(context); }
-    @TargetApi(21) public RestrictionsManager getRestrictionsManager() { return getRestrictionsManager(context); }
-    @TargetApi(21) public TelecomManager getTelecomManager() { return getTelecomManager(context); }
-    @TargetApi(21) public TvInputManager getTvInputManager() { return getTvInputManager(context); }
-    @TargetApi(22) public SubscriptionManager getSubscriptionManager() { return getSubscriptionManager(context); }
-    @TargetApi(22) public UsageStatsManager getUsageStatsManager() { return getUsageStatsManager(context); }
-    @TargetApi(23) public CarrierConfigManager getCarrierConfigManager() { return getCarrierConfigManager(context); }
-    @TargetApi(23) public FingerprintManager getFingerprintManager() { return getFingerprintManager(context); }
-    @TargetApi(23) public MidiManager getMidiManager() { return getMidiManager(context); }
-    @TargetApi(23) public NetworkStatsManager getNetworkStatsManager() { return getNetworkStatsManager(context); }
+    public ActivityManager getActivityManager() { return getActivityManager(context); }
+    public AlarmManager getAlarmManager() { return getAlarmManager(context); }
+    public AudioManager getAudioManager() { return getAudioManager(context); }
+    public ClipboardManager getClipboardManager() { return getClipboardManager(context); }
+    public ConnectivityManager getConnectivityManager() { return getConnectivityManager(context); }
+    public KeyguardManager getKeyguardManager() { return getKeyguardManager(context); }
+    public LayoutInflater getLayoutInflater() { return getLayoutInflater(context); }
+    public LocationManager getLocationManager() { return getLocationManager(context); }
+    public NotificationManager getNotificationManager() { return getNotificationManager(context); }
+    public PowerManager getPowerManager() { return getPowerManager(context); }
+    public SearchManager getSearchManager() { return getSearchManager(context); }
+    public SensorManager getSensorManager() { return getSensorManager(context); }
+    public TelephonyManager getTelephonyManager() { return getTelephonyManager(context); }
+    public Vibrator getVibrator() { return getVibrator(context); }
+    public WallpaperService getWallpaperService() { return getWallpaperService(context); }
+    public WifiManager getWifiManager() { return getWifiManager(context); }
+    public WindowManager getWindowManager() { return getWindowManager(context); }
+    public InputMethodManager getInputMethodManager() { return getInputMethodManager(context); }
+    public AccessibilityManager getAccessibilityManager() { return getAccessibilityManager(context); }
+    public AccountManager getAccountManager() { return getAccountManager(context); }
+    public DevicePolicyManager getDevicePolicyManager() { return getDevicePolicyManager(context); }
+    public DropBoxManager getDropBoxManager() { return getDropBoxManager(context); }
+    public UiModeManager getUiModeManager() { return getUiModeManager(context); }
+    public DownloadManager getDownloadManager() { return getDownloadManager(context); }
+    public StorageManager getStorageManager() { return getStorageManager(context); }
+    public NfcManager getNfcManager() { return getNfcManager(context); }
+    public UsbManager getUsbManager() { return getUsbManager(context); }
+    public TextServicesManager getTextServicesManager() { return getTextServicesManager(context); }
+    public WifiP2pManager getWifiP2pManager() { return getWifiP2pManager(context); }
+    public InputManager getInputManager() { return getInputManager(context); }
+    public MediaRouter getMediaRouter() { return getMediaRouter(context); }
+    public NsdManager getNsdManager() { return getNsdManager(context); }
+    public DisplayManager getDisplayManager() { return getDisplayManager(context); }
+    public UserManager getUserManager() { return getUserManager(context); }
+    public BluetoothManager getBluetoothManager() { return getBluetoothManager(context); }
+    public AppOpsManager getAppOpsManager() { return getAppOpsManager(context); }
+    public CaptioningManager getCaptioningManager() { return getCaptioningManager(context); }
+    public ConsumerIrManager getConsumerIrManager() { return getConsumerIrManager(context); }
+    public PrintManager getPrintManager() { return getPrintManager(context); }
+    public AppWidgetManager getAppWidgetManager() { return getAppWidgetManager(context); }
+    public BatteryManager getBatteryManager() { return getBatteryManager(context); }
+    public CameraManager getCameraManager() { return getCameraManager(context); }
+    public JobScheduler getJobScheduler() { return getJobScheduler(context); }
+    public LauncherApps getLauncherApps() { return getLauncherApps(context); }
+    public MediaProjectionManager getMediaProjectionManager() { return getMediaProjectionManager(context); }
+    public MediaSessionManager getMediaSessionManager() { return getMediaSessionManager(context); }
+    public RestrictionsManager getRestrictionsManager() { return getRestrictionsManager(context); }
+    public TelecomManager getTelecomManager() { return getTelecomManager(context); }
+    public TvInputManager getTvInputManager() { return getTvInputManager(context); }
+    public SubscriptionManager getSubscriptionManager() { return getSubscriptionManager(context); }
+    public UsageStatsManager getUsageStatsManager() { return getUsageStatsManager(context); }
+    public CarrierConfigManager getCarrierConfigManager() { return getCarrierConfigManager(context); }
+    public FingerprintManager getFingerprintManager() { return getFingerprintManager(context); }
+    public MidiManager getMidiManager() { return getMidiManager(context); }
+    public NetworkStatsManager getNetworkStatsManager() { return getNetworkStatsManager(context); }
 
-    @SuppressWarnings("unchecked")
-    public static <T> T cast(Object object) {
-        return (T) object;
-    }
-
-    @TargetApi(1) public static ActivityManager getActivityManager(Context context) { return cast(context.getSystemService(Context.ACTIVITY_SERVICE)); }
-    @TargetApi(1) public static AlarmManager getAlarmManager(Context context) { return cast(context.getSystemService(Context.ALARM_SERVICE)); }
-    @TargetApi(1) public static AudioManager getAudioManager(Context context) { return cast(context.getSystemService(Context.AUDIO_SERVICE)); }
-    @TargetApi(1) public static ClipboardManager getClipboardManager(Context context) { return cast(context.getSystemService(Context.CLIPBOARD_SERVICE)); }
-    @TargetApi(1) public static ConnectivityManager getConnectivityManager(Context context) { return cast(context.getSystemService(Context.CONNECTIVITY_SERVICE)); }
-    @TargetApi(1) public static KeyguardManager getKeyguardManager(Context context) { return cast(context.getSystemService(Context.KEYGUARD_SERVICE)); }
-    @TargetApi(1) public static LayoutInflater getLayoutInflater(Context context) { return cast(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)); }
-    @TargetApi(1) public static LocationManager getLocationManager(Context context) { return cast(context.getSystemService(Context.LOCATION_SERVICE)); }
-    @TargetApi(1) public static NotificationManager getNotificationManager(Context context) { return cast(context.getSystemService(Context.NOTIFICATION_SERVICE)); }
-    @TargetApi(1) public static PowerManager getPowerManager(Context context) { return cast(context.getSystemService(Context.POWER_SERVICE)); }
-    @TargetApi(1) public static SearchManager getSearchManager(Context context) { return cast(context.getSystemService(Context.SEARCH_SERVICE)); }
-    @TargetApi(1) public static SensorManager getSensorManager(Context context) { return cast(context.getSystemService(Context.SENSOR_SERVICE)); }
-    @TargetApi(1) public static TelephonyManager getTelephonyManager(Context context) { return cast(context.getSystemService(Context.TELEPHONY_SERVICE)); }
-    @TargetApi(1) public static Vibrator getVibrator(Context context) { return cast(context.getSystemService(Context.VIBRATOR_SERVICE)); }
-    @TargetApi(1) public static WallpaperService getWallpaperService(Context context) { return cast(context.getSystemService(Context.WALLPAPER_SERVICE)); }
-    @TargetApi(1) public static WifiManager getWifiManager(Context context) { return cast(context.getSystemService(Context.WIFI_SERVICE)); }
-    @TargetApi(1) public static WindowManager getWindowManager(Context context) { return cast(context.getSystemService(Context.WINDOW_SERVICE)); }
-    @TargetApi(3) public static InputMethodManager getInputMethodManager(Context context) { return cast(context.getSystemService(Context.INPUT_METHOD_SERVICE)); }
-    @TargetApi(4) public static AccessibilityManager getAccessibilityManager(Context context) { return cast(context.getSystemService(Context.ACCESSIBILITY_SERVICE)); }
-    @TargetApi(5) public static AccountManager getAccountManager(Context context) { return cast(context.getSystemService(Context.ACCOUNT_SERVICE)); }
-    @TargetApi(8) public static DevicePolicyManager getDevicePolicyManager(Context context) { return cast(context.getSystemService(Context.DEVICE_POLICY_SERVICE)); }
-    @TargetApi(8) public static DropBoxManager getDropBoxManager(Context context) { return cast(context.getSystemService(Context.DROPBOX_SERVICE)); }
-    @TargetApi(8) public static UiModeManager getUiModeManager(Context context) { return cast(context.getSystemService(Context.UI_MODE_SERVICE)); }
-    @TargetApi(9) public static DownloadManager getDownloadManager(Context context) { return cast(context.getSystemService(Context.DOWNLOAD_SERVICE)); }
-    @TargetApi(9) public static StorageManager getStorageManager(Context context) { return cast(context.getSystemService(Context.STORAGE_SERVICE)); }
-    @TargetApi(10) public static NfcManager getNfcManager(Context context) { return cast(context.getSystemService(Context.NFC_SERVICE)); }
-    @TargetApi(12) public static UsbManager getUsbManager(Context context) { return cast(context.getSystemService(Context.USB_SERVICE)); }
-    @TargetApi(14) public static TextServicesManager getTextServicesManager(Context context) { return cast(context.getSystemService(Context.TEXT_SERVICES_MANAGER_SERVICE)); }
-    @TargetApi(14) public static WifiP2pManager getWifiP2pManager(Context context) { return cast(context.getSystemService(Context.WIFI_P2P_SERVICE)); }
-    @TargetApi(16) public static InputManager getInputManager(Context context) { return cast(context.getSystemService(Context.INPUT_SERVICE)); }
-    @TargetApi(16) public static MediaRouter getMediaRouter(Context context) { return cast(context.getSystemService(Context.MEDIA_ROUTER_SERVICE)); }
-    @TargetApi(16) public static NsdManager getNsdManager(Context context) { return cast(context.getSystemService(Context.NSD_SERVICE)); }
-    @TargetApi(17) public static DisplayManager getDisplayManager(Context context) { return cast(context.getSystemService(Context.DISPLAY_SERVICE)); }
-    @TargetApi(17) public static UserManager getUserManager(Context context) { return cast(context.getSystemService(Context.USER_SERVICE)); }
-    @TargetApi(18) public static BluetoothManager getBluetoothManager(Context context) { return cast(context.getSystemService(Context.BLUETOOTH_SERVICE)); }
-    @TargetApi(19) public static AppOpsManager getAppOpsManager(Context context) { return cast(context.getSystemService(Context.APP_OPS_SERVICE)); }
-    @TargetApi(19) public static CaptioningManager getCaptioningManager(Context context) { return cast(context.getSystemService(Context.CAPTIONING_SERVICE)); }
-    @TargetApi(19) public static ConsumerIrManager getConsumerIrManager(Context context) { return cast(context.getSystemService(Context.CONSUMER_IR_SERVICE)); }
-    @TargetApi(19) public static PrintManager getPrintManager(Context context) { return cast(context.getSystemService(Context.PRINT_SERVICE)); }
-    @TargetApi(21) public static AppWidgetManager getAppWidgetManager(Context context) { return cast(context.getSystemService(Context.APPWIDGET_SERVICE)); }
-    @TargetApi(21) public static BatteryManager getBatteryManager(Context context) { return cast(context.getSystemService(Context.BATTERY_SERVICE)); }
-    @TargetApi(21) public static CameraManager getCameraManager(Context context) { return cast(context.getSystemService(Context.CAMERA_SERVICE)); }
-    @TargetApi(21) public static JobScheduler getJobScheduler(Context context) { return cast(context.getSystemService(Context.JOB_SCHEDULER_SERVICE)); }
-    @TargetApi(21) public static LauncherApps getLauncherApps(Context context) { return cast(context.getSystemService(Context.LAUNCHER_APPS_SERVICE)); }
-    @TargetApi(21) public static MediaProjectionManager getMediaProjectionManager(Context context) { return cast(context.getSystemService(Context.MEDIA_PROJECTION_SERVICE)); }
-    @TargetApi(21) public static MediaSessionManager getMediaSessionManager(Context context) { return cast(context.getSystemService(Context.MEDIA_SESSION_SERVICE)); }
-    @TargetApi(21) public static RestrictionsManager getRestrictionsManager(Context context) { return cast(context.getSystemService(Context.RESTRICTIONS_SERVICE)); }
-    @TargetApi(21) public static TelecomManager getTelecomManager(Context context) { return cast(context.getSystemService(Context.TELECOM_SERVICE)); }
-    @TargetApi(21) public static TvInputManager getTvInputManager(Context context) { return cast(context.getSystemService(Context.TV_INPUT_SERVICE)); }
-    @TargetApi(22) public static SubscriptionManager getSubscriptionManager(Context context) { return cast(context.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE)); }
-    @TargetApi(22) public static UsageStatsManager getUsageStatsManager(Context context) { return cast(context.getSystemService(Context.USAGE_STATS_SERVICE)); }
-    @TargetApi(23) public static CarrierConfigManager getCarrierConfigManager(Context context) { return cast(context.getSystemService(Context.CARRIER_CONFIG_SERVICE)); }
-    @TargetApi(23) public static FingerprintManager getFingerprintManager(Context context) { return cast(context.getSystemService(Context.FINGERPRINT_SERVICE)); }
-    @TargetApi(23) public static MidiManager getMidiManager(Context context) { return cast(context.getSystemService(Context.MIDI_SERVICE)); }
-    @TargetApi(23) public static NetworkStatsManager getNetworkStatsManager(Context context) { return cast(context.getSystemService(Context.NETWORK_STATS_SERVICE)); }
-
-    /*
-    @TargetApi(23) public static ActivityManager getActivityManager(Context context) { return context.getSystemService(ActivityManager.class); }
-    @TargetApi(23) public static AlarmManager getAlarmManager(Context context) { return context.getSystemService(AlarmManager.class); }
-    @TargetApi(23) public static AudioManager getAudioManager(Context context) { return context.getSystemService(AudioManager.class); }
-    @TargetApi(23) public static ClipboardManager getClipboardManager(Context context) { return context.getSystemService(ClipboardManager.class); }
-    @TargetApi(23) public static ConnectivityManager getConnectivityManager(Context context) { return context.getSystemService(ConnectivityManager.class); }
-    @TargetApi(23) public static KeyguardManager getKeyguardManager(Context context) { return context.getSystemService(KeyguardManager.class); }
-    @TargetApi(23) public static LayoutInflater getLayoutInflater(Context context) { return context.getSystemService(LayoutInflater.class); }
-    @TargetApi(23) public static LocationManager getLocationManager(Context context) { return context.getSystemService(LocationManager.class); }
-    @TargetApi(23) public static NotificationManager getNotificationManager(Context context) { return context.getSystemService(NotificationManager.class); }
-    @TargetApi(23) public static PowerManager getPowerManager(Context context) { return context.getSystemService(PowerManager.class); }
-    @TargetApi(23) public static SearchManager getSearchManager(Context context) { return context.getSystemService(SearchManager.class); }
-    @TargetApi(23) public static SensorManager getSensorManager(Context context) { return context.getSystemService(SensorManager.class); }
-    @TargetApi(23) public static TelephonyManager getTelephonyManager(Context context) { return context.getSystemService(TelephonyManager.class); }
-    @TargetApi(23) public static Vibrator getVibrator(Context context) { return context.getSystemService(Vibrator.class); }
-    @TargetApi(23) public static WallpaperService getWallpaperService(Context context) { return context.getSystemService(WallpaperService.class); }
-    @TargetApi(23) public static WifiManager getWifiManager(Context context) { return context.getSystemService(WifiManager.class); }
-    @TargetApi(23) public static WindowManager getWindowManager(Context context) { return context.getSystemService(WindowManager.class); }
-    @TargetApi(23) public static InputMethodManager getInputMethodManager(Context context) { return context.getSystemService(InputMethodManager.class); }
-    @TargetApi(23) public static AccessibilityManager getAccessibilityManager(Context context) { return context.getSystemService(AccessibilityManager.class); }
-    @TargetApi(23) public static AccountManager getAccountManager(Context context) { return context.getSystemService(AccountManager.class); }
-    @TargetApi(23) public static DevicePolicyManager getDevicePolicyManager(Context context) { return context.getSystemService(DevicePolicyManager.class); }
-    @TargetApi(23) public static DropBoxManager getDropBoxManager(Context context) { return context.getSystemService(DropBoxManager.class); }
-    @TargetApi(23) public static UiModeManager getUiModeManager(Context context) { return context.getSystemService(UiModeManager.class); }
-    @TargetApi(23) public static DownloadManager getDownloadManager(Context context) { return context.getSystemService(DownloadManager.class); }
-    @TargetApi(23) public static StorageManager getStorageManager(Context context) { return context.getSystemService(StorageManager.class); }
-    @TargetApi(23) public static NfcManager getNfcManager(Context context) { return context.getSystemService(NfcManager.class); }
-    @TargetApi(23) public static UsbManager getUsbManager(Context context) { return context.getSystemService(UsbManager.class); }
-    @TargetApi(23) public static TextServicesManager getTextServicesManager(Context context) { return context.getSystemService(TextServicesManager.class); }
-    @TargetApi(23) public static WifiP2pManager getWifiP2pManager(Context context) { return context.getSystemService(WifiP2pManager.class); }
-    @TargetApi(23) public static InputManager getInputManager(Context context) { return context.getSystemService(InputManager.class); }
-    @TargetApi(23) public static MediaRouter getMediaRouter(Context context) { return context.getSystemService(MediaRouter.class); }
-    @TargetApi(23) public static NsdManager getNsdManager(Context context) { return context.getSystemService(NsdManager.class); }
-    @TargetApi(23) public static DisplayManager getDisplayManager(Context context) { return context.getSystemService(DisplayManager.class); }
-    @TargetApi(23) public static UserManager getUserManager(Context context) { return context.getSystemService(UserManager.class); }
-    @TargetApi(23) public static BluetoothManager getBluetoothManager(Context context) { return context.getSystemService(BluetoothManager.class); }
-    @TargetApi(23) public static AppOpsManager getAppOpsManager(Context context) { return context.getSystemService(AppOpsManager.class); }
-    @TargetApi(23) public static CaptioningManager getCaptioningManager(Context context) { return context.getSystemService(CaptioningManager.class); }
-    @TargetApi(23) public static ConsumerIrManager getConsumerIrManager(Context context) { return context.getSystemService(ConsumerIrManager.class); }
-    @TargetApi(23) public static PrintManager getPrintManager(Context context) { return context.getSystemService(PrintManager.class); }
-    @TargetApi(23) public static AppWidgetManager getAppWidgetManager(Context context) { return context.getSystemService(AppWidgetManager.class); }
-    @TargetApi(23) public static BatteryManager getBatteryManager(Context context) { return context.getSystemService(BatteryManager.class); }
-    @TargetApi(23) public static CameraManager getCameraManager(Context context) { return context.getSystemService(CameraManager.class); }
-    @TargetApi(23) public static JobScheduler getJobScheduler(Context context) { return context.getSystemService(JobScheduler.class); }
-    @TargetApi(23) public static LauncherApps getLauncherApps(Context context) { return context.getSystemService(LauncherApps.class); }
-    @TargetApi(23) public static MediaProjectionManager getMediaProjectionManager(Context context) { return context.getSystemService(MediaProjectionManager.class); }
-    @TargetApi(23) public static MediaSessionManager getMediaSessionManager(Context context) { return context.getSystemService(MediaSessionManager.class); }
-    @TargetApi(23) public static RestrictionsManager getRestrictionsManager(Context context) { return context.getSystemService(RestrictionsManager.class); }
-    @TargetApi(23) public static TelecomManager getTelecomManager(Context context) { return context.getSystemService(TelecomManager.class); }
-    @TargetApi(23) public static TvInputManager getTvInputManager(Context context) { return context.getSystemService(TvInputManager.class); }
-    @TargetApi(23) public static SubscriptionManager getSubscriptionManager(Context context) { return context.getSystemService(SubscriptionManager.class); }
-    @TargetApi(23) public static UsageStatsManager getUsageStatsManager(Context context) { return context.getSystemService(UsageStatsManager.class); }
-    @TargetApi(23) public static CarrierConfigManager getCarrierConfigManager(Context context) { return context.getSystemService(CarrierConfigManager.class); }
-    @TargetApi(23) public static FingerprintManager getFingerprintManager(Context context) { return context.getSystemService(FingerprintManager.class); }
-    @TargetApi(23) public static MidiManager getMidiManager(Context context) { return context.getSystemService(MidiManager.class); }
-    @TargetApi(23) public static NetworkStatsManager getNetworkStatsManager(Context context) { return context.getSystemService(NetworkStatsManager.class); }
-    */
+    public static ActivityManager getActivityManager(Context context) { return context.getSystemService(ActivityManager.class); }
+    public static AlarmManager getAlarmManager(Context context) { return context.getSystemService(AlarmManager.class); }
+    public static AudioManager getAudioManager(Context context) { return context.getSystemService(AudioManager.class); }
+    public static ClipboardManager getClipboardManager(Context context) { return context.getSystemService(ClipboardManager.class); }
+    public static ConnectivityManager getConnectivityManager(Context context) { return context.getSystemService(ConnectivityManager.class); }
+    public static KeyguardManager getKeyguardManager(Context context) { return context.getSystemService(KeyguardManager.class); }
+    public static LayoutInflater getLayoutInflater(Context context) { return context.getSystemService(LayoutInflater.class); }
+    public static LocationManager getLocationManager(Context context) { return context.getSystemService(LocationManager.class); }
+    public static NotificationManager getNotificationManager(Context context) { return context.getSystemService(NotificationManager.class); }
+    public static PowerManager getPowerManager(Context context) { return context.getSystemService(PowerManager.class); }
+    public static SearchManager getSearchManager(Context context) { return context.getSystemService(SearchManager.class); }
+    public static SensorManager getSensorManager(Context context) { return context.getSystemService(SensorManager.class); }
+    public static TelephonyManager getTelephonyManager(Context context) { return context.getSystemService(TelephonyManager.class); }
+    public static Vibrator getVibrator(Context context) { return context.getSystemService(Vibrator.class); }
+    public static WallpaperService getWallpaperService(Context context) { return context.getSystemService(WallpaperService.class); }
+    public static WifiManager getWifiManager(Context context) { return context.getSystemService(WifiManager.class); }
+    public static WindowManager getWindowManager(Context context) { return context.getSystemService(WindowManager.class); }
+    public static InputMethodManager getInputMethodManager(Context context) { return context.getSystemService(InputMethodManager.class); }
+    public static AccessibilityManager getAccessibilityManager(Context context) { return context.getSystemService(AccessibilityManager.class); }
+    public static AccountManager getAccountManager(Context context) { return context.getSystemService(AccountManager.class); }
+    public static DevicePolicyManager getDevicePolicyManager(Context context) { return context.getSystemService(DevicePolicyManager.class); }
+    public static DropBoxManager getDropBoxManager(Context context) { return context.getSystemService(DropBoxManager.class); }
+    public static UiModeManager getUiModeManager(Context context) { return context.getSystemService(UiModeManager.class); }
+    public static DownloadManager getDownloadManager(Context context) { return context.getSystemService(DownloadManager.class); }
+    public static StorageManager getStorageManager(Context context) { return context.getSystemService(StorageManager.class); }
+    public static NfcManager getNfcManager(Context context) { return context.getSystemService(NfcManager.class); }
+    public static UsbManager getUsbManager(Context context) { return context.getSystemService(UsbManager.class); }
+    public static TextServicesManager getTextServicesManager(Context context) { return context.getSystemService(TextServicesManager.class); }
+    public static WifiP2pManager getWifiP2pManager(Context context) { return context.getSystemService(WifiP2pManager.class); }
+    public static InputManager getInputManager(Context context) { return context.getSystemService(InputManager.class); }
+    public static MediaRouter getMediaRouter(Context context) { return context.getSystemService(MediaRouter.class); }
+    public static NsdManager getNsdManager(Context context) { return context.getSystemService(NsdManager.class); }
+    public static DisplayManager getDisplayManager(Context context) { return context.getSystemService(DisplayManager.class); }
+    public static UserManager getUserManager(Context context) { return context.getSystemService(UserManager.class); }
+    public static BluetoothManager getBluetoothManager(Context context) { return context.getSystemService(BluetoothManager.class); }
+    public static AppOpsManager getAppOpsManager(Context context) { return context.getSystemService(AppOpsManager.class); }
+    public static CaptioningManager getCaptioningManager(Context context) { return context.getSystemService(CaptioningManager.class); }
+    public static ConsumerIrManager getConsumerIrManager(Context context) { return context.getSystemService(ConsumerIrManager.class); }
+    public static PrintManager getPrintManager(Context context) { return context.getSystemService(PrintManager.class); }
+    public static AppWidgetManager getAppWidgetManager(Context context) { return context.getSystemService(AppWidgetManager.class); }
+    public static BatteryManager getBatteryManager(Context context) { return context.getSystemService(BatteryManager.class); }
+    public static CameraManager getCameraManager(Context context) { return context.getSystemService(CameraManager.class); }
+    public static JobScheduler getJobScheduler(Context context) { return context.getSystemService(JobScheduler.class); }
+    public static LauncherApps getLauncherApps(Context context) { return context.getSystemService(LauncherApps.class); }
+    public static MediaProjectionManager getMediaProjectionManager(Context context) { return context.getSystemService(MediaProjectionManager.class); }
+    public static MediaSessionManager getMediaSessionManager(Context context) { return context.getSystemService(MediaSessionManager.class); }
+    public static RestrictionsManager getRestrictionsManager(Context context) { return context.getSystemService(RestrictionsManager.class); }
+    public static TelecomManager getTelecomManager(Context context) { return context.getSystemService(TelecomManager.class); }
+    public static TvInputManager getTvInputManager(Context context) { return context.getSystemService(TvInputManager.class); }
+    public static SubscriptionManager getSubscriptionManager(Context context) { return context.getSystemService(SubscriptionManager.class); }
+    public static UsageStatsManager getUsageStatsManager(Context context) { return context.getSystemService(UsageStatsManager.class); }
+    public static CarrierConfigManager getCarrierConfigManager(Context context) { return context.getSystemService(CarrierConfigManager.class); }
+    public static FingerprintManager getFingerprintManager(Context context) { return context.getSystemService(FingerprintManager.class); }
+    public static MidiManager getMidiManager(Context context) { return context.getSystemService(MidiManager.class); }
+    public static NetworkStatsManager getNetworkStatsManager(Context context) { return context.getSystemService(NetworkStatsManager.class); }
 
 /*
 1 ACTIVITY_SERVICE   Use with getSystemService(Class) to retrieve a ActivityManager for interacting with the global system state
