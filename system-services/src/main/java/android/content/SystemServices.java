@@ -30,9 +30,6 @@ import android.app.usage.NetworkStatsManager;
 import android.app.usage.UsageStatsManager;
 import android.appwidget.AppWidgetManager;
 import android.bluetooth.BluetoothManager;
-import android.content.ClipboardManager;
-import android.content.Context;
-import android.content.RestrictionsManager;
 import android.content.pm.LauncherApps;
 import android.hardware.ConsumerIrManager;
 import android.hardware.SensorManager;
@@ -72,18 +69,13 @@ import android.view.inputmethod.InputMethodManager;
 import android.view.textservice.TextServicesManager;
 
 /**
- * By the way, v23 supports:
- *
- * <pre>
- * <T> Context.getSystemService(Class)
- * </pre>
  *
  */
 public class SystemServices {
 
     Context context;
 
-    public SystemServices(Context context) {
+    private SystemServices(Context context) {
         this.context = context;
     }
 
@@ -146,65 +138,60 @@ public class SystemServices {
     public WifiManager getWifiManager() { return getWifiManager(context); }
     public WindowManager getWindowManager() { return getWindowManager(context); }
 
-    @SuppressWarnings("unchecked")
-    public static <T> T cast(Object object) {
-        return (T) object;
-    }
-
-    public static AccessibilityManager getAccessibilityManager(Context context) { return cast(context.getSystemService(Context.ACCESSIBILITY_SERVICE)); }
-    public static AccountManager getAccountManager(Context context) { return cast(context.getSystemService(Context.ACCOUNT_SERVICE)); }
-    public static ActivityManager getActivityManager(Context context) { return cast(context.getSystemService(Context.ACTIVITY_SERVICE)); }
-    public static AlarmManager getAlarmManager(Context context) { return cast(context.getSystemService(Context.ALARM_SERVICE)); }
-    public static AppWidgetManager getAppWidgetManager(Context context) { return cast(context.getSystemService(Context.APPWIDGET_SERVICE)); }
-    public static AppOpsManager getAppOpsManager(Context context) { return cast(context.getSystemService(Context.APP_OPS_SERVICE)); }
-    public static AudioManager getAudioManager(Context context) { return cast(context.getSystemService(Context.AUDIO_SERVICE)); }
-    public static BatteryManager getBatteryManager(Context context) { return cast(context.getSystemService(Context.BATTERY_SERVICE)); }
-    public static BluetoothManager getBluetoothManager(Context context) { return cast(context.getSystemService(Context.BLUETOOTH_SERVICE)); }
-    public static CameraManager getCameraManager(Context context) { return cast(context.getSystemService(Context.CAMERA_SERVICE)); }
-    public static CaptioningManager getCaptioningManager(Context context) { return cast(context.getSystemService(Context.CAPTIONING_SERVICE)); }
-    public static CarrierConfigManager getCarrierConfigManager(Context context) { return cast(context.getSystemService(Context.CARRIER_CONFIG_SERVICE)); }
-    public static ClipboardManager getClipboardManager(Context context) { return cast(context.getSystemService(Context.CLIPBOARD_SERVICE)); }
-    public static ConnectivityManager getConnectivityManager(Context context) { return cast(context.getSystemService(Context.CONNECTIVITY_SERVICE)); }
-    public static ConsumerIrManager getConsumerIrManager(Context context) { return cast(context.getSystemService(Context.CONSUMER_IR_SERVICE)); }
-    public static DevicePolicyManager getDevicePolicyManager(Context context) { return cast(context.getSystemService(Context.DEVICE_POLICY_SERVICE)); }
-    public static DisplayManager getDisplayManager(Context context) { return cast(context.getSystemService(Context.DISPLAY_SERVICE)); }
-    public static DownloadManager getDownloadManager(Context context) { return cast(context.getSystemService(Context.DOWNLOAD_SERVICE)); }
-    public static DropBoxManager getDropBoxManager(Context context) { return cast(context.getSystemService(Context.DROPBOX_SERVICE)); }
-    public static FingerprintManager getFingerprintManager(Context context) { return cast(context.getSystemService(Context.FINGERPRINT_SERVICE)); }
-    public static InputMethodManager getInputMethodManager(Context context) { return cast(context.getSystemService(Context.INPUT_METHOD_SERVICE)); }
-    public static InputManager getInputManager(Context context) { return cast(context.getSystemService(Context.INPUT_SERVICE)); }
-    public static JobScheduler getJobScheduler(Context context) { return cast(context.getSystemService(Context.JOB_SCHEDULER_SERVICE)); }
-    public static KeyguardManager getKeyguardManager(Context context) { return cast(context.getSystemService(Context.KEYGUARD_SERVICE)); }
-    public static LauncherApps getLauncherApps(Context context) { return cast(context.getSystemService(Context.LAUNCHER_APPS_SERVICE)); }
-    public static LayoutInflater getLayoutInflater(Context context) { return cast(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)); }
-    public static LocationManager getLocationManager(Context context) { return cast(context.getSystemService(Context.LOCATION_SERVICE)); }
-    public static MediaProjectionManager getMediaProjectionManager(Context context) { return cast(context.getSystemService(Context.MEDIA_PROJECTION_SERVICE)); }
-    public static MediaRouter getMediaRouter(Context context) { return cast(context.getSystemService(Context.MEDIA_ROUTER_SERVICE)); }
-    public static MediaSessionManager getMediaSessionManager(Context context) { return cast(context.getSystemService(Context.MEDIA_SESSION_SERVICE)); }
-    public static MidiManager getMidiManager(Context context) { return cast(context.getSystemService(Context.MIDI_SERVICE)); }
-    public static NetworkStatsManager getNetworkStatsManager(Context context) { return cast(context.getSystemService(Context.NETWORK_STATS_SERVICE)); }
-    public static NfcManager getNfcManager(Context context) { return cast(context.getSystemService(Context.NFC_SERVICE)); }
-    public static NotificationManager getNotificationManager(Context context) { return cast(context.getSystemService(Context.NOTIFICATION_SERVICE)); }
-    public static NsdManager getNsdManager(Context context) { return cast(context.getSystemService(Context.NSD_SERVICE)); }
-    public static PowerManager getPowerManager(Context context) { return cast(context.getSystemService(Context.POWER_SERVICE)); }
-    public static RestrictionsManager getRestrictionsManager(Context context) { return cast(context.getSystemService(Context.RESTRICTIONS_SERVICE)); }
-    public static SearchManager getSearchManager(Context context) { return cast(context.getSystemService(Context.SEARCH_SERVICE)); }
-    public static SensorManager getSensorManager(Context context) { return cast(context.getSystemService(Context.SENSOR_SERVICE)); }
-    public static StorageManager getStorageManager(Context context) { return cast(context.getSystemService(Context.STORAGE_SERVICE)); }
-    public static TelecomManager getTelecomManager(Context context) { return cast(context.getSystemService(Context.TELECOM_SERVICE)); }
-    public static TelephonyManager getTelephonyManager(Context context) { return cast(context.getSystemService(Context.TELEPHONY_SERVICE)); }
-    public static SubscriptionManager getSubscriptionManager(Context context) { return cast(context.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE)); }
-    public static TextServicesManager getTextServicesManager(Context context) { return cast(context.getSystemService(Context.TEXT_SERVICES_MANAGER_SERVICE)); }
-    public static TvInputManager getTvInputManager(Context context) { return cast(context.getSystemService(Context.TV_INPUT_SERVICE)); }
-    public static UiModeManager getUiModeManager(Context context) { return cast(context.getSystemService(Context.UI_MODE_SERVICE)); }
-    public static UsageStatsManager getUsageStatsManager(Context context) { return cast(context.getSystemService(Context.USAGE_STATS_SERVICE)); }
-    public static UsbManager getUsbManager(Context context) { return cast(context.getSystemService(Context.USB_SERVICE)); }
-    public static UserManager getUserManager(Context context) { return cast(context.getSystemService(Context.USER_SERVICE)); }
-    public static Vibrator getVibrator(Context context) { return cast(context.getSystemService(Context.VIBRATOR_SERVICE)); }
-    public static WallpaperService getWallpaperService(Context context) { return cast(context.getSystemService(Context.WALLPAPER_SERVICE)); }
-    public static WifiP2pManager getWifiP2pManager(Context context) { return cast(context.getSystemService(Context.WIFI_P2P_SERVICE)); }
-    public static WifiManager getWifiManager(Context context) { return cast(context.getSystemService(Context.WIFI_SERVICE)); }
-    public static WindowManager getWindowManager(Context context) { return cast(context.getSystemService(Context.WINDOW_SERVICE)); }
+    public static AccessibilityManager getAccessibilityManager(Context context) { return context.getSystemService(AccessibilityManager.class); }
+    public static AccountManager getAccountManager(Context context) { return context.getSystemService(AccountManager.class); }
+    public static ActivityManager getActivityManager(Context context) { return context.getSystemService(ActivityManager.class); }
+    public static AlarmManager getAlarmManager(Context context) { return context.getSystemService(AlarmManager.class); }
+    public static AppWidgetManager getAppWidgetManager(Context context) { return context.getSystemService(AppWidgetManager.class); }
+    public static AppOpsManager getAppOpsManager(Context context) { return context.getSystemService(AppOpsManager.class); }
+    public static AudioManager getAudioManager(Context context) { return context.getSystemService(AudioManager.class); }
+    public static BatteryManager getBatteryManager(Context context) { return context.getSystemService(BatteryManager.class); }
+    public static BluetoothManager getBluetoothManager(Context context) { return context.getSystemService(BluetoothManager.class); }
+    public static CameraManager getCameraManager(Context context) { return context.getSystemService(CameraManager.class); }
+    public static CaptioningManager getCaptioningManager(Context context) { return context.getSystemService(CaptioningManager.class); }
+    public static CarrierConfigManager getCarrierConfigManager(Context context) { return context.getSystemService(CarrierConfigManager.class); }
+    public static ClipboardManager getClipboardManager(Context context) { return context.getSystemService(ClipboardManager.class); }
+    public static ConnectivityManager getConnectivityManager(Context context) { return context.getSystemService(ConnectivityManager.class); }
+    public static ConsumerIrManager getConsumerIrManager(Context context) { return context.getSystemService(ConsumerIrManager.class); }
+    public static DevicePolicyManager getDevicePolicyManager(Context context) { return context.getSystemService(DevicePolicyManager.class); }
+    public static DisplayManager getDisplayManager(Context context) { return context.getSystemService(DisplayManager.class); }
+    public static DownloadManager getDownloadManager(Context context) { return context.getSystemService(DownloadManager.class); }
+    public static DropBoxManager getDropBoxManager(Context context) { return context.getSystemService(DropBoxManager.class); }
+    public static FingerprintManager getFingerprintManager(Context context) { return context.getSystemService(FingerprintManager.class); }
+    public static InputMethodManager getInputMethodManager(Context context) { return context.getSystemService(InputMethodManager.class); }
+    public static InputManager getInputManager(Context context) { return context.getSystemService(InputManager.class); }
+    public static JobScheduler getJobScheduler(Context context) { return context.getSystemService(JobScheduler.class); }
+    public static KeyguardManager getKeyguardManager(Context context) { return context.getSystemService(KeyguardManager.class); }
+    public static LauncherApps getLauncherApps(Context context) { return context.getSystemService(LauncherApps.class); }
+    public static LayoutInflater getLayoutInflater(Context context) { return context.getSystemService(LayoutInflater.class); }
+    public static LocationManager getLocationManager(Context context) { return context.getSystemService(LocationManager.class); }
+    public static MediaProjectionManager getMediaProjectionManager(Context context) { return context.getSystemService(MediaProjectionManager.class); }
+    public static MediaRouter getMediaRouter(Context context) { return context.getSystemService(MediaRouter.class); }
+    public static MediaSessionManager getMediaSessionManager(Context context) { return context.getSystemService(MediaSessionManager.class); }
+    public static MidiManager getMidiManager(Context context) { return context.getSystemService(MidiManager.class); }
+    public static NetworkStatsManager getNetworkStatsManager(Context context) { return context.getSystemService(NetworkStatsManager.class); }
+    public static NfcManager getNfcManager(Context context) { return context.getSystemService(NfcManager.class); }
+    public static NotificationManager getNotificationManager(Context context) { return context.getSystemService(NotificationManager.class); }
+    public static NsdManager getNsdManager(Context context) { return context.getSystemService(NsdManager.class); }
+    public static PowerManager getPowerManager(Context context) { return context.getSystemService(PowerManager.class); }
+    public static RestrictionsManager getRestrictionsManager(Context context) { return context.getSystemService(RestrictionsManager.class); }
+    public static SearchManager getSearchManager(Context context) { return context.getSystemService(SearchManager.class); }
+    public static SensorManager getSensorManager(Context context) { return context.getSystemService(SensorManager.class); }
+    public static StorageManager getStorageManager(Context context) { return context.getSystemService(StorageManager.class); }
+    public static TelecomManager getTelecomManager(Context context) { return context.getSystemService(TelecomManager.class); }
+    public static TelephonyManager getTelephonyManager(Context context) { return context.getSystemService(TelephonyManager.class); }
+    public static SubscriptionManager getSubscriptionManager(Context context) { return context.getSystemService(SubscriptionManager.class); }
+    public static TextServicesManager getTextServicesManager(Context context) { return context.getSystemService(TextServicesManager.class); }
+    public static TvInputManager getTvInputManager(Context context) { return context.getSystemService(TvInputManager.class); }
+    public static UiModeManager getUiModeManager(Context context) { return context.getSystemService(UiModeManager.class); }
+    public static UsageStatsManager getUsageStatsManager(Context context) { return context.getSystemService(UsageStatsManager.class); }
+    public static UsbManager getUsbManager(Context context) { return context.getSystemService(UsbManager.class); }
+    public static UserManager getUserManager(Context context) { return context.getSystemService(UserManager.class); }
+    public static Vibrator getVibrator(Context context) { return context.getSystemService(Vibrator.class); }
+    public static WallpaperService getWallpaperService(Context context) { return context.getSystemService(WallpaperService.class); }
+    public static WifiP2pManager getWifiP2pManager(Context context) { return context.getSystemService(WifiP2pManager.class); }
+    public static WifiManager getWifiManager(Context context) { return context.getSystemService(WifiManager.class); }
+    public static WindowManager getWindowManager(Context context) { return context.getSystemService(WindowManager.class); }
 
     /*
 ACCESSIBILITY_SERVICE   Use with getSystemService(Class) to retrieve a AccessibilityManager for giving the user feedback for UI events through the registered event listeners.
@@ -230,7 +217,7 @@ FINGERPRINT_SERVICE     Use with getSystemService(Class) to retrieve a Fingerpri
 INPUT_METHOD_SERVICE    Use with getSystemService(Class) to retrieve a InputMethodManager for accessing input methods.
 INPUT_SERVICE   Use with getSystemService(Class) to retrieve a InputManager for interacting with input devices.
 JOB_SCHEDULER_SERVICE   Use with getSystemService(Class) to retrieve a JobScheduler instance for managing occasional background tasks.
-KEYGUARD_SERVICE        Use with getSystemService(Class) to retrieve a NotificationManager for controlling keyguard.
+KEYGUARD_SERVICE        Use with getSystemService(Class) to retrieve a KeyguardManager for controlling keyguard.
 LAUNCHER_APPS_SERVICE   Use with getSystemService(Class) to retrieve a LauncherApps for querying and monitoring launchable apps across profiles of a user.
 LAYOUT_INFLATER_SERVICE Use with getSystemService(Class) to retrieve a LayoutInflater for inflating layout resources in this context.
 LOCATION_SERVICE        Use with getSystemService(Class) to retrieve a LocationManager for controlling location updates.
