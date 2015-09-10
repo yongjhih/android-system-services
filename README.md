@@ -20,15 +20,22 @@ NotificationManager notificationManager = SystemServices.from(context).getNotifi
 
 ```gradle
 depedencies {
-    //compile 'com.github.yongjhih:android-system-services:4.0.0'
-    //compile 'com.github.yongjhih:android-system-services:5.0.0'
-    // compile 'com.github.yongjhih:android-system-services:8.0.0'
-    // compile 'com.github.yongjhih:android-system-services:10.0.0'
-    // compile 'com.github.yongjhih:android-system-services:14.0.0'
-    // compile 'com.github.yongjhih:android-system-services:16.0.0'
-    compile 'com.github.yongjhih:android-system-services:21.0.0'
-    // compile 'com.github.yongjhih:android-system-services:22.0.0'
-    // compile 'com.github.yongjhih:android-system-services:23.0.0'
+    // compile 'com.github.yongjhih:android-system-services:1'
+    // compile 'com.github.yongjhih:android-system-services:3'
+    // compile 'com.github.yongjhih:android-system-services:4'
+    // compile 'com.github.yongjhih:android-system-services:5'
+    // compile 'com.github.yongjhih:android-system-services:8'
+    // compile 'com.github.yongjhih:android-system-services:9'
+    // compile 'com.github.yongjhih:android-system-services:10'
+    // compile 'com.github.yongjhih:android-system-services:12'
+    // compile 'com.github.yongjhih:android-system-services:14'
+    // compile 'com.github.yongjhih:android-system-services:16'
+    // compile 'com.github.yongjhih:android-system-services:17'
+    // compile 'com.github.yongjhih:android-system-services:18'
+    // compile 'com.github.yongjhih:android-system-services:19'
+    compile 'com.github.yongjhih:android-system-services:21'
+    // compile 'com.github.yongjhih:android-system-services:22'
+    // compile 'com.github.yongjhih:android-system-services:23'
 }
 ```
 
