@@ -26,6 +26,7 @@ import android.app.SearchManager;
 import android.app.UiModeManager;
 import android.app.admin.DevicePolicyManager;
 import android.app.job.JobScheduler;
+import android.app.usage.NetworkStatsManager;
 import android.app.usage.UsageStatsManager;
 import android.appwidget.AppWidgetManager;
 import android.bluetooth.BluetoothManager;
@@ -37,11 +38,13 @@ import android.hardware.ConsumerIrManager;
 import android.hardware.SensorManager;
 import android.hardware.camera2.CameraManager;
 import android.hardware.display.DisplayManager;
+import android.hardware.fingerprint.FingerprintManager;
 import android.hardware.input.InputManager;
 import android.hardware.usb.UsbManager;
 import android.location.LocationManager;
 import android.media.AudioManager;
 import android.media.MediaRouter;
+import android.media.midi.MidiManager;
 import android.media.projection.MediaProjectionManager;
 import android.media.session.MediaSessionManager;
 import android.media.tv.TvInputManager;
@@ -58,6 +61,8 @@ import android.os.Vibrator;
 import android.os.storage.StorageManager;
 import android.service.wallpaper.WallpaperService;
 import android.telecom.TelecomManager;
+import android.telephony.CarrierConfigManager;
+import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.view.LayoutInflater;
 import android.view.WindowManager;
@@ -97,7 +102,7 @@ public class SystemServices {
     public BluetoothManager getBluetoothManager() { return getBluetoothManager(context); }
     public CameraManager getCameraManager() { return getCameraManager(context); }
     public CaptioningManager getCaptioningManager() { return getCaptioningManager(context); }
-    // v23 public CarrierConfigManager getCarrierConfigManager() { return getCarrierConfigManager(context); }
+    public CarrierConfigManager getCarrierConfigManager() { return getCarrierConfigManager(context); }
     public ClipboardManager getClipboardManager() { return getClipboardManager(context); }
     public ConnectivityManager getConnectivityManager() { return getConnectivityManager(context); }
     public ConsumerIrManager getConsumerIrManager() { return getConsumerIrManager(context); }
@@ -105,7 +110,7 @@ public class SystemServices {
     public DisplayManager getDisplayManager() { return getDisplayManager(context); }
     public DownloadManager getDownloadManager() { return getDownloadManager(context); }
     public DropBoxManager getDropBoxManager() { return getDropBoxManager(context); }
-    // v23 public FingerprintManager getFingerprintManager() { return getFingerprintManager(context); }
+    public FingerprintManager getFingerprintManager() { return getFingerprintManager(context); }
     public InputMethodManager getInputMethodManager() { return getInputMethodManager(context); }
     public InputManager getInputManager() { return getInputManager(context); }
     public JobScheduler getJobScheduler() { return getJobScheduler(context); }
@@ -116,8 +121,8 @@ public class SystemServices {
     public MediaProjectionManager getMediaProjectionManager() { return getMediaProjectionManager(context); }
     public MediaRouter getMediaRouter() { return getMediaRouter(context); }
     public MediaSessionManager getMediaSessionManager() { return getMediaSessionManager(context); }
-    // v23 public MidiManager getMidiManager() { return getMidiManager(context); }
-    // v23 public NetworkStatsManager getNetworkStatsManager() { return getNetworkStatsManager(context); }
+    public MidiManager getMidiManager() { return getMidiManager(context); }
+    public NetworkStatsManager getNetworkStatsManager() { return getNetworkStatsManager(context); }
     public NfcManager getNfcManager() { return getNfcManager(context); }
     public NotificationManager getNotificationManager() { return getNotificationManager(context); }
     public NsdManager getNsdManager() { return getNsdManager(context); }
@@ -128,11 +133,11 @@ public class SystemServices {
     public StorageManager getStorageManager() { return getStorageManager(context); }
     public TelecomManager getTelecomManager() { return getTelecomManager(context); }
     public TelephonyManager getTelephonyManager() { return getTelephonyManager(context); }
-    // v22 public SubscriptionManager getSubscriptionManager() { return getSubscriptionManager(context); }
+    public SubscriptionManager getSubscriptionManager() { return getSubscriptionManager(context); }
     public TextServicesManager getTextServicesManager() { return getTextServicesManager(context); }
     public TvInputManager getTvInputManager() { return getTvInputManager(context); }
     public UiModeManager getUiModeManager() { return getUiModeManager(context); }
-    // v22 public UsageStatsManager getUsageStatsManager() { return getUsageStatsManager(context); }
+    public UsageStatsManager getUsageStatsManager() { return getUsageStatsManager(context); }
     public UsbManager getUsbManager() { return getUsbManager(context); }
     public UserManager getUserManager() { return getUserManager(context); }
     public Vibrator getVibrator() { return getVibrator(context); }
@@ -157,7 +162,7 @@ public class SystemServices {
     public static BluetoothManager getBluetoothManager(Context context) { return cast(context.getSystemService(Context.BLUETOOTH_SERVICE)); }
     public static CameraManager getCameraManager(Context context) { return cast(context.getSystemService(Context.CAMERA_SERVICE)); }
     public static CaptioningManager getCaptioningManager(Context context) { return cast(context.getSystemService(Context.CAPTIONING_SERVICE)); }
-    // public static CarrierConfigManager getCarrierConfigManager(Context context) { return cast(context.getSystemService(Context.CARRIER_CONFIG_SERVICE)); }
+    public static CarrierConfigManager getCarrierConfigManager(Context context) { return cast(context.getSystemService(Context.CARRIER_CONFIG_SERVICE)); }
     public static ClipboardManager getClipboardManager(Context context) { return cast(context.getSystemService(Context.CLIPBOARD_SERVICE)); }
     public static ConnectivityManager getConnectivityManager(Context context) { return cast(context.getSystemService(Context.CONNECTIVITY_SERVICE)); }
     public static ConsumerIrManager getConsumerIrManager(Context context) { return cast(context.getSystemService(Context.CONSUMER_IR_SERVICE)); }
@@ -165,7 +170,7 @@ public class SystemServices {
     public static DisplayManager getDisplayManager(Context context) { return cast(context.getSystemService(Context.DISPLAY_SERVICE)); }
     public static DownloadManager getDownloadManager(Context context) { return cast(context.getSystemService(Context.DOWNLOAD_SERVICE)); }
     public static DropBoxManager getDropBoxManager(Context context) { return cast(context.getSystemService(Context.DROPBOX_SERVICE)); }
-    // public static FingerprintManager getFingerprintManager(Context context) { return cast(context.getSystemService(Context.FINGERPRINT_SERVICE)); }
+    public static FingerprintManager getFingerprintManager(Context context) { return cast(context.getSystemService(Context.FINGERPRINT_SERVICE)); }
     public static InputMethodManager getInputMethodManager(Context context) { return cast(context.getSystemService(Context.INPUT_METHOD_SERVICE)); }
     public static InputManager getInputManager(Context context) { return cast(context.getSystemService(Context.INPUT_SERVICE)); }
     public static JobScheduler getJobScheduler(Context context) { return cast(context.getSystemService(Context.JOB_SCHEDULER_SERVICE)); }
@@ -176,8 +181,8 @@ public class SystemServices {
     public static MediaProjectionManager getMediaProjectionManager(Context context) { return cast(context.getSystemService(Context.MEDIA_PROJECTION_SERVICE)); }
     public static MediaRouter getMediaRouter(Context context) { return cast(context.getSystemService(Context.MEDIA_ROUTER_SERVICE)); }
     public static MediaSessionManager getMediaSessionManager(Context context) { return cast(context.getSystemService(Context.MEDIA_SESSION_SERVICE)); }
-    // public static MidiManager getMidiManager(Context context) { return cast(context.getSystemService(Context.MIDI_SERVICE)); }
-    // public static NetworkStatsManager getNetworkStatsManager(Context context) { return cast(context.getSystemService(Context.NETWORK_STATS_SERVICE)); }
+    public static MidiManager getMidiManager(Context context) { return cast(context.getSystemService(Context.MIDI_SERVICE)); }
+    public static NetworkStatsManager getNetworkStatsManager(Context context) { return cast(context.getSystemService(Context.NETWORK_STATS_SERVICE)); }
     public static NfcManager getNfcManager(Context context) { return cast(context.getSystemService(Context.NFC_SERVICE)); }
     public static NotificationManager getNotificationManager(Context context) { return cast(context.getSystemService(Context.NOTIFICATION_SERVICE)); }
     public static NsdManager getNsdManager(Context context) { return cast(context.getSystemService(Context.NSD_SERVICE)); }
@@ -188,11 +193,11 @@ public class SystemServices {
     public static StorageManager getStorageManager(Context context) { return cast(context.getSystemService(Context.STORAGE_SERVICE)); }
     public static TelecomManager getTelecomManager(Context context) { return cast(context.getSystemService(Context.TELECOM_SERVICE)); }
     public static TelephonyManager getTelephonyManager(Context context) { return cast(context.getSystemService(Context.TELEPHONY_SERVICE)); }
-    // public static SubscriptionManager getSubscriptionManager(Context context) { return cast(context.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE)); }
+    public static SubscriptionManager getSubscriptionManager(Context context) { return cast(context.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE)); }
     public static TextServicesManager getTextServicesManager(Context context) { return cast(context.getSystemService(Context.TEXT_SERVICES_MANAGER_SERVICE)); }
     public static TvInputManager getTvInputManager(Context context) { return cast(context.getSystemService(Context.TV_INPUT_SERVICE)); }
     public static UiModeManager getUiModeManager(Context context) { return cast(context.getSystemService(Context.UI_MODE_SERVICE)); }
-    // v22 public static UsageStatsManager getUsageStatsManager(Context context) { return cast(context.getSystemService(Context.USAGE_STATS_SERVICE)); }
+    public static UsageStatsManager getUsageStatsManager(Context context) { return cast(context.getSystemService(Context.USAGE_STATS_SERVICE)); }
     public static UsbManager getUsbManager(Context context) { return cast(context.getSystemService(Context.USB_SERVICE)); }
     public static UserManager getUserManager(Context context) { return cast(context.getSystemService(Context.USER_SERVICE)); }
     public static Vibrator getVibrator(Context context) { return cast(context.getSystemService(Context.VIBRATOR_SERVICE)); }
