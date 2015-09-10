@@ -1,5 +1,7 @@
 # SystemServices
 
+Easy to retrieve system service.
+
 ## Usage
 
 Before:
@@ -13,6 +15,26 @@ After:
 ```java
 NotificationManager notificationManager = SystemServices.from(context).getNotificationManager();
 ```
+
+## Installation
+
+```gradle
+depedencies {
+    //compile 'com.infstory:android-system-services:4.0.0'
+    //compile 'com.infstory:android-system-services:5.0.0'
+    // compile 'com.infstory:android-system-services:8.0.0'
+    // compile 'com.infstory:android-system-services:10.0.0'
+    // compile 'com.infstory:android-system-services:14.0.0'
+    // compile 'com.infstory:android-system-services:16.0.0'
+    compile 'com.infstory:android-system-services:21.0.0'
+    // compile 'com.infstory:android-system-services:22.0.0'
+    // compile 'com.infstory:android-system-services:23.0.0'
+}
+```
+
+## TODO
+
+* Support various sdk version
 
 
 ## LICENSE
