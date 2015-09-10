@@ -26,8 +26,19 @@ depedencies {
 
 ## TODO
 
-* Support various sdk version
+```java
+@SystemService
+NotificationManager notificationManager;
 
+@Override public void onCreate(Bundle saveInstanceState) {
+    super.onCreate(saveInstanceState);
+
+    SystemServices.inject(this);
+
+    // Notification notification = ...;
+    notificationManager.notify(1, notification);
+}
+```
 
 ## LICENSE
 
